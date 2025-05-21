@@ -162,7 +162,7 @@ export class Notify {
     if (!url || url === "") {
       throw new Error("未配置钉钉Webhook。");
     }
-
+    console.log(`dingding url: ${url}, content: ${options.content}`);
     return axios.post(url, {
       msgtype: "text",
       text: {
