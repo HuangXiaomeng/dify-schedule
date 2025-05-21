@@ -280,7 +280,7 @@ export class Notify {
     const trycatch = async (name, fn) => {
       try {
         await fn(options);
-        console.log(`[${name}]: 消息推送成功!`);
+        console.log(`[${name}]: 消息推送成功!, content: ${options.content}`);
       } catch (e) {
         console.log(`[${name}]: 消息推送失败! 原因: ${e.message}`);
       }
