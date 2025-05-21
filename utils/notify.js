@@ -162,7 +162,8 @@ export class Notify {
     if (!url || url === "") {
       throw new Error("未配置钉钉Webhook。");
     }
-    console.log(`dingding env: ${env}, options: ${options}`);
+    console.log('dingding env:', JSON.stringify(env, null, 2));
+    console.log('options:', JSON.stringify(options, null, 2));
     return axios.post(url, {
       msgtype: "text",
       text: {
